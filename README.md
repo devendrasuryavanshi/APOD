@@ -1,6 +1,6 @@
 # APOD Web Page
 
-![Demo Image](demo.png)
+![Demo Image](https://apod.nasa.gov/apod/image/2310/M33_Triangulum1024.jpg)
 
 The Astronomy Picture of the Day (APOD) web page is a simple web application that allows you to explore stunning astronomical images and their descriptions provided by NASA's APOD API.
 
