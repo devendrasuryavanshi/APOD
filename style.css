@@ -1,0 +1,334 @@
+/* Reset styles for all elements and set the default font-family */
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+/* Style for the body element */
+body {
+    background-color: #dffcff;
+}
+
+/* Header container with date input and title */
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 98%;
+    height: 60px;
+    margin: 2%;
+}
+
+/* Date input container */
+.date {
+    position: relative;
+    left: 0;
+    width: 20%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="date"] {
+    appearance: none;
+    outline: none;
+    border: none;
+    background: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 2px solid #3498db;
+    width: 30%;
+}
+
+#date {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+#date:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px #e74c3c;
+}
+
+/* Title container */
+.title {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background-color: #050A30;
+    align-items: center;
+    height: auto;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+/* Main content container with image, text, and copyright */
+.main {
+    visibility: hidden;
+    opacity: 0;
+    display: grid;
+    grid-template-rows: 75px 450px;
+    grid-template-columns: 800px auto;
+    grid-gap: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    transition: opacity 2s;
+}
+
+/* Make main content visible */
+.main-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Style for the image container */
+#galaxy {
+    border: 5px solid #000;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 3px #000000;
+    grid-row: 1/span 2;
+    grid-column: 1/ span 1;
+    background-size: contain;
+    background-color: #fff;
+}
+
+/* Style for the image text container */
+#pic_txt {
+    color: #000;
+    background-color: #ffb300;
+    display: inline-block;
+    border: 5px solid #000;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 3px #000000;
+    grid-row: 1/span 1;
+    grid-column: 2/span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+/* Style for the image description paragraph */
+#pic_p {
+    border: 5px solid #050A30;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 3px #000000;
+    grid-row: 2/span 1;
+    grid-column: 2/span 1;
+    overflow: auto;
+    text-overflow: ellipsis;
+    max-height: 100%;
+    white-space: normal;
+    scrollbar-width: thin;
+    scrollbar-color: #232323 #dffcff;
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Customize the scrollbar for the image description */
+#pic_p::-webkit-scrollbar {
+    width: 15px;
+    border-left: 1px solid black;
+}
+
+#pic_p::-webkit-scrollbar-thumb {
+    background-color: #232323;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Copy text at the bottom */
+#copy {
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+    padding: 8px;
+    display: inline-block;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+}
+
+/* Media query for screens with a maximum width of 1050px */
+@media (max-width: 1050px) {
+    .main {
+        grid-template-rows: 65px 390px;
+        grid-template-columns: 575px auto;
+    }
+    #galaxy {
+        grid-row: 2/span 1;
+        grid-column: 1/ span 1;
+    }
+    #pic_txt {
+        grid-row: 1/span 1;
+        grid-column: 1/span 2;
+    }
+    #pic_p {
+        grid-row: 2/span 1;
+        grid-column: 2/span 1;
+    }
+}
+
+/* Media query for screens with a maximum width of 850px */
+@media (max-width: 850px) {
+    .main {
+        grid-template-rows: 65px auto 400px;
+        grid-template-columns: 100%;
+    }
+    #pic_txt {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    #galaxy {
+        padding-top: 65.25%;
+        grid-row: 2;
+        grid-column: 1;
+    }
+    #pic_p {
+        grid-row: 3;
+        grid-column: 1;
+    }
+}
+
+/* Media query for screens with a maximum width of 775px */
+@media (max-width: 775px) {
+    .head {
+        /* display: block; */
+        display: grid;
+        grid-template-rows: 100% 100%;
+        grid-template-columns: 100%;
+        margin-bottom: 40px;
+        width: 97%;
+    }
+
+    .title {
+        grid-row: 1/span 1;
+        grid-column: 1/ span 1;
+        width: 90%;
+    }
+
+    .date {
+        grid-row: 2/span 1;
+        grid-column: 1/ span 1;
+        width: 175px;
+    }
+}
+
+/* Media query for screens with a maximum width of 575px */
+@media (max-width: 575px) {
+    .title {
+        width: 70%;
+        height: 30px;
+        font-size: 10px;
+    }
+}
+
+/* Media query for screens with a maximum width of 475px */
+@media (max-width: 475px) {
+    .title {
+        width: 90%;
+        height: 40px;
+        font-size: 9px;
+    }
+
+    .main {
+        grid-template-rows: 90px auto 400px;
+    }
+}
+
+/* Media query for screens with a maximum width of 330px */
+@media (max-width: 330px) {
+    .title {
+        width: 90%;
+        line-height: 30px;
+        font-size: 7px;
+    }
+}
+
+/* Media query for screens with a maximum width of 260px */
+@media (max-width: 260px) {
+    .title {
+        width: 90%;
+        height: 35px;
+        font-size: 5px;
+    }
+
+    .date {
+        width: 40px;
+    }
+}
+
+/* Dark mode toggle button */
+#dark-mode-toggle {
+    font-weight: bold;
+    width: 50px;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    background-color: #000;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 10px;
+    border-radius: 70px;
+    cursor: pointer;
+}
+
+/* Style for the dark mode toggle button when in dark mode */
+body.dark-mode #dark-mode-toggle {
+    border: 3px solid #fff;
+}
+
+/* Dark mode toggle button label */
+#dark-mode-toggle label {
+    margin-right: 10px;
+}
+
+/* Dark mode styles for the entire page */
+body.dark-mode {
+    color: #fff;
+    background-color: #000;
+}
+
+/* Dark mode styles for the image description paragraph */
+body.dark-mode #pic_p {
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px 2px #fff;
+}
+
+/* Dark mode styles for the image text container */
+body.dark-mode #pic_txt {
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px 2px #fff;
+}
+
+/* Dark mode styles for the image container */
+body.dark-mode #galaxy {
+    background-color: #000;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px 2px #fff;
+}
+
+/* Dark mode styles for the title container */
+body.dark-mode .title {
+    color: #050A30;
+    background-color: #dffcff;
+}
+
+/* Dark mode styles for the copy text */
+body.dark-mode #copy {
+    color: #000;
+    background-color: #fff;
+}
