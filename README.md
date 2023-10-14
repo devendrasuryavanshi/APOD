@@ -13,7 +13,7 @@ The Astronomy Picture of the Day (APOD) web page is a simple web application tha
 
 ## Usage
 
-1. Clone or download this repository.
+1. Clone Repo or visit: https://devendrasuryavanshi.github.io/APOD/.
 
 2. Open the `index.html` file in your web browser.
 
@@ -24,10 +24,6 @@ The Astronomy Picture of the Day (APOD) web page is a simple web application tha
 ## Contributing
 
 Contributions to this project are welcome. If you'd like to enhance the web page, fix bugs, or make improvements, please fork the repository, make your changes, and create a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
